@@ -1,0 +1,44 @@
+{
+  "customers": [
+    {
+      "name": "Frankz Alarcon",
+      "company": "EPN",
+      "email": "correo@correo.com",
+      "phone": "0985352939",
+      "notes": "",
+      "id": 1
+    },
+    {
+      "name": "Frankz Alarcon",
+      "company": "EPN",
+      "email": "correo@correo.com",
+      "phone": "0985352939",
+      "notes": "",
+      "id": 2
+    },
+    {
+      "name": "Frankz ",
+      "company": "EPN",
+      "email": "correo@correo.com",
+      "phone": "0985352939",
+      "notes": "",
+      "id": 3
+    },
+    {
+      "name": "Karen",
+      "company": "Karen Design",
+      "email": "correo@correo.com",
+      "phone": "43242342342",
+      "notes": "karen",
+      "id": 4
+    },
+    {
+      "name": "Frankz Alarcon Cando",
+      "company": "EPN",
+      "email": "leninalarcon@gmail.com",
+      "phone": "0985352939",
+      "notes": "Hacer nose",
+      "id": 5
+    }
+  ]
+}
