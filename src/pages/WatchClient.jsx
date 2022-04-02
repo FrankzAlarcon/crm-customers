@@ -11,7 +11,6 @@ function WatchClient() {
         const url = `http://localhost:3100/customers/${id}`;
         const response = await fetch(url);
         const result = await response.json();
-        console.log(result);
         if (Object.keys(result).length !== 0) {
           setClient(result);
           setWasFound(true);

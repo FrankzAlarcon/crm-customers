@@ -8,7 +8,6 @@ function Home() {
       const url = 'http://localhost:3100/customers';
       const response = await fetch(url);
       const customersResponse = await response.json();
-      console.log(customersResponse);
       setCustomers(customersResponse);
     };
     fecthCustomers();

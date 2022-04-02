@@ -33,6 +33,7 @@ function Client({ client }) {
         <button
           className="bg-blue-600 hover:bg-blue-700 block w-full text-white p-2 uppercase font-bold mb-3 text-xs"
           type="button"
+          onClick={() => navigate(`/customers/edit/${id}`)}
         >
           Editar
         </button>

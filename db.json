@@ -1,11 +1,11 @@
 {
   "customers": [
     {
-      "name": "Frankz Alarcon",
+      "name": "Frankz Alarcon Actualizado",
       "company": "EPN",
-      "email": "correo@correo.com",
+      "email": "frankz@correo.com",
       "phone": "0985352939",
-      "notes": "",
+      "notes": "Editado con metodo put",
       "id": 1
     },
     {
