@@ -8,7 +8,7 @@ function WatchClient() {
   useEffect(() => {
     const fetchClient = async () => {
       try {
-        const url = `http://localhost:3100/customers/${id}`;
+        const url = `${import.meta.env.VITE_API_URL}/${id}`;
         const response = await fetch(url);
         const result = await response.json();
         if (Object.keys(result).length !== 0) {

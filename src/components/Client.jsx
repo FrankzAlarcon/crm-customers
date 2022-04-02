@@ -11,7 +11,7 @@ function Client({ client, customers, setCustomers }) {
     try {
       const confirmDelete = window.confirm(`¿Realmente deseas eliminar a: ${name}`);
       if (confirmDelete) {
-        const url = `http://localhost:3100/customers/${id}`;
+        const url = `${import.meta.env.VITE_API_URL}/${id}`;
         const response = await fetch(url, {
           method: 'DELETE',
         });

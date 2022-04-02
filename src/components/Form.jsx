@@ -30,7 +30,7 @@ function FormComponent({ client = {}, loading = false }) {
       let response;
       if (client.id) {
         // Editar registro
-        const url = `http://localhost:3100/customers/${client.id}`;
+        const url = `${import.meta.env.VITE_API_URL}/${client.id}`;
         response = await fetch(url, {
           method: 'PUT',
           body: JSON.stringify(values),
@@ -40,7 +40,7 @@ function FormComponent({ client = {}, loading = false }) {
         });
       } else {
         // Nuevo registro
-        const url = 'http://localhost:3100/customers';
+        const url = `${import.meta.env.VITE_API_URL}`;
         response = await fetch(url, {
           method: 'POST',
           body: JSON.stringify(values),

@@ -5,7 +5,7 @@ function Home() {
   const [customers, setCustomers] = useState([]);
   useEffect(() => {
     const fecthCustomers = async () => {
-      const url = 'http://localhost:3100/customers';
+      const url = import.meta.env.VITE_API_URL;
       const response = await fetch(url);
       const customersResponse = await response.json();
       setCustomers(customersResponse);
