@@ -26,9 +26,14 @@ function Home() {
           </tr>
         </thead>
         <tbody>
-          {
-            customers.map((client) => (<Client key={client.id} client={client} />))
-          }
+          {customers.map((client) => (
+            <Client
+              key={client.id}
+              client={client}
+              customers={customers}
+              setCustomers={setCustomers}
+            />
+          ))}
         </tbody>
       </table>
     </>

@@ -1,11 +1,28 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Client({ client }) {
+function Client({ client, customers, setCustomers }) {
   const navigate = useNavigate();
   const {
     name, company, email, phone, id,
   } = client;
+
+  const handleDelete = async () => {
+    try {
+      const confirmDelete = window.confirm(`¿Realmente deseas eliminar a: ${name}`);
+      if (confirmDelete) {
+        const url = `http://localhost:3100/customers/${id}`;
+        const response = await fetch(url, {
+          method: 'DELETE',
+        });
+        await response.json();
+        const newCustomers = customers.filter((clientState) => clientState.id !== id);
+        setCustomers(newCustomers);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <tr className="border-b-2 hover:bg-gray-50">
@@ -40,6 +57,7 @@ function Client({ client }) {
         <button
           className="bg-red-600 hover:bg-red-700 block w-full text-white p-2 uppercase font-bold mb-3 text-xs"
           type="button"
+          onClick={handleDelete}
         >
           Eliminar
         </button>

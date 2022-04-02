@@ -28,5 +28,6 @@ module.exports = {
     'react/no-array-index-key': 'warn',
     'no-unused-vars': 'warn',
     'jsx-a11y/click-events-have-key-events': 'warn',
+    'no-alert': 'warn',
   },
 };
